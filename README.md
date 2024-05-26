@@ -1,4 +1,4 @@
-# Social Network Project
+# Song REST Project
 
 ## Features
 
