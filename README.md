@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```bash
 python manage.py migrate
 ``` 
-- Automatic all the Json Data will be added in database
+- Automatic all the Json Data will be added in database while running the migrate command
 5. Run Project
 ```bash
 python manage.py runserver
@@ -41,8 +41,8 @@ Visit http://127.0.0.1:8000/swagger to access the API with Documentation
 
 1. You can provide any name instead of social_network
 ```bash
-docker build -t social_network -f Dockerfile.local . 
-docker run -p 8000:8000 social_network
+docker build -t song_rest -f Dockerfile.local . 
+docker run -p 8000:8000 song_rest
 
             or 
 
@@ -55,18 +55,12 @@ docker-compose up --build
 Visit http://localhost:8000/swagger to access the API with Documentation
 ```
 
-![alt text](images/swagger_ss.png)
+![alt text](static/images/full_swagger.png)
 
 
 #### API Usage Understanding
 
-- Postman Collection 
-```
-https://elements.getpostman.com/redirect?entityId=32318803-6382ae01-5ea6-4d0e-a8f9-e6bd1d60cd32&entityType=collection
-```
-
-
-1. **Authentication**
+1. **Song List**
 - You can use `/auth/signup/` api to register the user
 - Use `/auth/login/` api to login the user
 

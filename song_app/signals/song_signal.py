@@ -10,7 +10,7 @@ def add_data(sender, **kwargs):
 
         # Check if the model has any existing data
     if not Song.objects.exists():
-        json_file_path = os.path.join(settings.STATIC_ROOT, 'data.json')
+        json_file_path = os.path.join(settings.STATIC_ROOT, 'json/data.json')
         with open(json_file_path) as file:
             data = json.load(file)
             songs = data.get('id')

@@ -29,7 +29,7 @@ class SongListViewTestCase(TestCase):
     def test_same_json_data_created(self):
         songs_queryset = Song.objects.all() # automatic all the song will be created at time of migrations
 
-        json_file_path = os.path.join(settings.STATIC_ROOT, 'data.json')
+        json_file_path = os.path.join(settings.STATIC_ROOT, 'json/data.json')
         with open(json_file_path) as file:
             data = json.load(file)
             for i in range(2):
