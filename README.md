@@ -14,37 +14,37 @@
 ### Steps for Installation and Run Project
 
 #### Without Docker
-1. Clone the repository
+1. **Clone the repository**
 ```bash
 git clone https://github.com/lakshit77/song_rest.git .
 ```
-2. Create Virtual Enviornment (optional but recommended)
-3. Install dependency inside Virtual Enviornment from requirements.txt
+2. **Create Virtual Enviornment (optional but recommended)**
+3. **Install dependency inside Virtual Enviornment from requirements.txt**
 ```bash
 pip install -r requirements.txt
 ```
-4. Run Database Migrations
+4. **Run Database Migrations**
 ```bash
 python manage.py migrate
 ``` 
 - Automatic all the Json Data will be added in database while running the migrate command
-5. Run Project
+5. **Run Project**
 ```bash
 python manage.py runserver
 ```
-6. Visit below URL to see the swagger documentation
+6. **Visit below URL to see the swagger documentation**
 ```bash
 Visit http://127.0.0.1:8000/swagger to access the API with Documentation
 ```
 
-7. Run test case
+7. **Run test case**
 ```bash
 python manage.py test
 ```
 
 #### With Docker or Docker compose
 
-1. You can provide any name instead of social_network
+1. **You can provide any name instead of social_network**
 ```bash
 docker build -t song_rest -f Dockerfile.local . 
 docker run -p 8000:8000 song_rest
@@ -55,7 +55,7 @@ docker-compose up --build
 ```
 
 
-2. Visit below URL to see the swagger documentation
+2. **Visit below URL to see the swagger documentation**
 ```bash
 Visit http://localhost:8000/swagger to access the API with Documentation
 ```
