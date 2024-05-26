@@ -16,7 +16,7 @@
 #### Without Docker
 1. Clone the repository
 ```bash
-git clone https://github.com/lakshit77/social-network.git .
+git clone https://github.com/lakshit77/song_rest.git .
 ```
 2. Create Virtual Enviornment (optional but recommended)
 3. Install dependency inside Virtual Enviornment from requirements.txt
@@ -26,7 +26,8 @@ pip install -r requirements.txt
 4. Run Database Migrations
 ```bash
 python manage.py migrate
-```
+``` 
+- Automatic all the Json Data will be added in database
 5. Run Project
 ```bash
 python manage.py runserver
