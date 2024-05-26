@@ -76,7 +76,7 @@ Visit http://localhost:8000/swagger to access the API with Documentation
 - Use `/songs/{id}/` GET api to get single song data
 - Inside `id` box pass the id of song to get it data
 
-3. **Single Song Data**
+3. **Update Song Rating Data**
 ![alt text](static/images/patch_song_swagger.png)
 - Use `/songs/{id}/` PATCH api to change the rating of song
 - Inside `id` box pass the id of song
