@@ -12,11 +12,11 @@ class SongSerializer(serializers.ModelSerializer):
 
 class PartialUpdateSerializer(serializers.ModelSerializer):
     rating = serializers.IntegerField(
-        validators=[MinValueValidator(0), MaxValueValidator(5)]
+        validators=[MinValueValidator(1), MaxValueValidator(5)]
     )
 
     def validate_rating(self, value):
-        if value < 0 or value > 5:
+        if value < 1 or value > 5:
             raise serializers.ValidationError(rating_validation[MESSAGE])
         return value
     class Meta:

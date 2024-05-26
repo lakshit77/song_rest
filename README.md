@@ -37,6 +37,11 @@ python manage.py runserver
 Visit http://127.0.0.1:8000/swagger to access the API with Documentation
 ```
 
+7. Run test case
+```bash
+python manage.py test
+```
+
 #### With Docker or Docker compose
 
 1. You can provide any name instead of social_network
@@ -61,28 +66,24 @@ Visit http://localhost:8000/swagger to access the API with Documentation
 #### API Usage Understanding
 
 1. **Song List**
-- You can use `/auth/signup/` api to register the user
-- Use `/auth/login/` api to login the user
+![alt text](static/images/all_songs_swagger.png)
+- You can use `/songs/` GET api to get all the songs with Pagination
+- Pass the `title` value inside the box of `title` to filter the data according to title and get matching songs
+- Inside `page` pass page number to get that set of data of songs
+
+2. **Single Song Data**
+![alt text](static/images/single_song_swagger.png)
+- Use `/songs/{id}/` GET api to get single song data
+- Inside `id` box pass the id of song to get it data
+
+3. **Single Song Data**
+![alt text](static/images/patch_song_swagger.png)
+- Use `/songs/{id}/` PATCH api to change the rating of song
+- Inside `id` box pass the id of song
+- Pass rating value for the song
 
 **Note:**
-    - After using above api you will get the `token` use this and pass in header to access other api's
-    - In postman collection this will be done automatic
-    - In swagger in there is Authorize section you can pass it in this format `Token <token>`
+    - Rating value will be between 1 to 5
 
-2. **Send Friend Request**
-- Use `/friend-requests/create/` api to send friend request to particular `user_id`
 
-3. **Delete Friend Request**
-- Use `/friend-requests/delete/<id>` api to delete friend request to particular `friend_request_id`
 
-4. **Check Pending Friend Request**
-- Use `/friend-requests/pending/` api to check for all the pending friend request
-
-5. **Respond to Friend Request**
-- Use `/friend-requests/respond/<id>` api to respond to all the friend request you might have got
-
-6. **Get all your Friend**
-- Use `/list_my_friends/` api to get all your friends
-
-7. **Search for Friend**
-- Use `/search_friends/` api to search for friends
